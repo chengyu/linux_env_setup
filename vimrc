@@ -15,6 +15,7 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
     Plugin 'octol/vim-cpp-enhanced-highlight'
     Plugin 'luochen1990/rainbow'
     Plugin 'tpope/vim-fugitive'
+    Plugin 'preservim/tagbar'
 
     " All of your Plugins must be added before the following line
     call vundle#end()            " required
@@ -246,3 +247,8 @@ if has("cscope")
     nnoremap <C-\> :cs find s <C-R>=expand("<cword>")<CR><CR>
     nnoremap <C-]> :cs find g <C-R>=expand("<cword>")<CR><CR>
 endif
+
+let g:tagbar_width = 50
+let g:tagbar_autofocus = 1
+nnoremap <F8> :TagbarToggle<CR>
+
